@@ -11,9 +11,9 @@ function PositionDemo () {
             <p className="text-center">Relative container</p>
             </div>
 
-            <div className="fixed top-0 left-0 bg-green-200 h-32 w-full">
+            {/* <div className="fixed top-0 left-0 bg-green-200 h-32 w-full">
                 <p className="text-center">Fixed container (scroll to see effect)</p>
-            </div>
+            </div> */}
 
             <div className="sticky top-20 bg-red-200 h-32">
                 <p className="text-center" >Sticky container (scroll to see effect)</p>

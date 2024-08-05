@@ -1,4 +1,5 @@
 import Header from "../components/Header"
+import HeaderPresentacion from "../components/HeaderPresentacion"
 import PositionDemo from "../components/PositionDemo"
 import SectionSeparate from "../components/SectionSeparate"
 
@@ -6,6 +7,9 @@ function App() {
 
   return (
     <div /* className="App" */>
+      <div>
+        <HeaderPresentacion />
+      </div>
      <Header />
      <div>
 
