@@ -5,7 +5,7 @@
 .container{
   position: relative;
   height: 300vh;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(85, 70, 70);
 }
 
 .stickyMask{
@@ -16,7 +16,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  mask-image: url('/medias/mask.svg');
+  mask-image: url('/medias/mask1.svg');
   mask-position: 52.35% center;
   mask-repeat: no-repeat;
   mask-size: 80%;
