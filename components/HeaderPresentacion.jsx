@@ -1,6 +1,6 @@
 import { animate } from "framer-motion";
 import { useRef, useEffect } from "react";
-
+import styles from '../src/page.module.css'
 
 function HeaderPresentacion () {
     const container = useRef(null);
@@ -30,10 +30,10 @@ function HeaderPresentacion () {
     
 
     return (
-        <main className="styles-main">
-            <div ref={container} className="styles-container">
-                <div ref={stickyMask} className="styles-stickyMask">
-                    <video autoPlay muted loop className="styles-video">
+        <main className={styles.main}>
+            <div ref={container} className={styles.container}>
+                <div ref={stickyMask} className={styles.stickyMask}>
+                    <video autoPlay muted loop >
                         <source src="/medias/compumen.mp4" type="video/mp4" />
                     </video>
                 </div>
