@@ -27,7 +27,7 @@ function SectionSeparate () {
         target: gallery,
         offset: ["start end", "end start"]
     })
-    console.log(scrollYProgress,"funciona")
+  
     const { height } = dimension;
     const y = useTransform(scrollYProgress, [0,1], [0, height * 2])
     const y2 = useTransform(scrollYProgress, [0,1], [0, height * 3.3])
