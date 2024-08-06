@@ -1,40 +1,71 @@
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import NavBarNuevo from "./NavBarNuevo";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import "../style/Header.css"
-import { useEffect, useRef } from "react";
 
 function Header () {
-    const { scrollY } = useScroll();
-    const scale = useTransform(scrollY, [0, 300],[1,10]);
-    const y = useTransform(scrollY, [0,300], [0, -150]);
+  const [isOpen, setIsOpen] = useState(false)
+  
+  const burger = {
+      opened:(deg) => ({
+          rotate: deg,
+      }),
+      closed: {
+          rotate:0,
+      }
+  }
 
-    const mainContentRef = useRef(null);
+  const image = {
+      scaleNormal: {
+          scale: 1,
+          transition: {
+              delay: 0.2,
+              duration:0.4,
+              ease:"easeOut",
+          }
+      },
+      scaleDown: {
+          scale: 0.85,
+          transition: {
+              duration:0.4,
+              ease:"easeOut",
+          }
+      }
+  }
 
-    useEffect(() => {
-       const unsubscribeY = scrollY.on("change", (latest) => {
-
-           if (mainContentRef.current) {
-               mainContentRef.current.style.transform = `translateY(${scrollY.get() * 0.5}px)`;
-           }
-       });
-       return () => unsubscribeY();
-    },[scrollY]);
 
     return (
-       <header className="relative h-screen flex  bg-gray-100 overflow-hidden">
-            <motion.div 
-                className="logo bg-blue-500 text-white flex items-center justify-center rouded-full overflow-hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-                style={{scale, y}}
-                >
-                <div className="content text-4xl font-bold">
-                    <h1 className="">Logo</h1>
-                </div>
-            </motion.div>
-            <div ref={mainContentRef} className="absolute top-full w-full h-screen bg-white flex items-center justify-center">
-                    <p className="text-2xl ">Contenido del sitio Web</p>
+      <div className="header-div h-screen w-screen bg-[#eaeaea] overflow-hidden"> 
+        <motion.img src="./images/presence.jpeg" alt="logo" 
+             className=" inset-0 w-full h-full object-cover 
+                     origin-bottom" variants={image} animate={isOpen ? 'scaleDown' : 'scaleNormal'} />
+        <section className="w-full h-full px-12 pt-4">
+             <div className="w-full p-2 border border-[#eaeaea] border-dashed 
+                     flex justify-between items-center rounded-lg relative z-40 ">
+                 <h1 className="font-bold text-[#eaeaea] text-3xl" >YOUR ONLINE PRESENCE</h1>
+                 <div className="space-y-2 cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+                     <motion.div className="w-[30px] h-[2px] bg-[#eaeaea]
+                                              origin-left " 
+                                 variants={burger} 
+                                 animate={isOpen ? 'opened' : 'closed'}
+                                 custom={"20deg"} ></motion.div>
+                     <motion.div className="w-[30px] h-[2px] bg-[#eaeaea] origin-left "
+                                 variants={burger} 
+                                 animate={isOpen ? 'opened' : 'closed'}
+                                 custom={"-20deg"}  ></motion.div>
+                     
+                 </div>
+             </div>
+        </section>  
+        <AnimatePresence mode="wait">
+        {
+         isOpen ? (
+             <NavBarNuevo setIsOpen={setIsOpen}/>
+         ) : null
+        }        
+         </AnimatePresence>   
 
-            </div>
-       </header>
+     </div>
     )
 }
 

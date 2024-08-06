@@ -38,6 +38,12 @@ function HeaderPresentacion () {
                     </video>
                 </div>
             </div>
+            <div className="bg-slate-500 ">
+                <h1 className="text-5xl ">
+
+                header para mostrar
+                </h1>
+            </div>
         </main>
     )
 }

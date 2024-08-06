@@ -5,18 +5,18 @@ import Lenis from "@studio-freight/lenis";
 import { useTransform, useScroll, motion } from "framer-motion";
 
 const images = [
-    "1.jpg",
-    "2.jpg",
-    "3.jpg",
-    "4.jpg",
-    "5.jpg",
-    "6.jpg",
-    "7.jpg",
-    "8.jpg",
-    "9.jpg",
-    "10.jpg",
-    "11.jpg",
-    "12.jpg",
+    "./galeria/1.jpg",
+    "./galeria/2.jpg",
+    "./galeria/3.jpg",
+    "./galeria/4.jpg",
+    "./galeria/5.jpg",
+    "./galeria/6.jpg",
+    "./galeria/7.jpg",
+    "./galeria/8.jpg",
+    "./galeria/9.jpg",
+    "./galeria/10.jpg",
+    "./galeria/11.jpg",
+    "./galeria/12.jpg",
 ]
 
 function SectionSeparate () {

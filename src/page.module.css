@@ -1,11 +1,11 @@
 .main{
-  margin-bottom: 100vh;
+  margin-bottom: 1vh;
 }
 
 .container{
   position: relative;
   height: 300vh;
-  background-color: rgb(85, 70, 70);
+  background: radial-gradient(circle, #ffffff, #a0a0a0);
 }
 
 .stickyMask{
@@ -16,7 +16,7 @@
   height: 100vh;
   align-items: center;
   justify-content: center;
-  mask-image: url('/medias/mask1.svg');
+  mask-image: url('/medias/mask4.svg');
   mask-position: 52.35% center;
   mask-repeat: no-repeat;
   mask-size: 80%;
