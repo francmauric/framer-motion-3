@@ -37,23 +37,23 @@ function Header() {
       <motion.div
         src="./images/presence.jpeg"
         alt="padel"
-        className="absolute bg-slate-500 flex flex-wrap justify-center  w-full h-full object-cover 
+        className="absolute bg-gray-950 flex flex-wrap justify-center  w-full h-full object-cover 
                     origin-bottom"
         variants={image}
         animate={isOpen ? "scaleDown" : "scaleNormal"}
       >
         <div className="w-full pt-20 justify-center flex ">
           <img
-            className=" w-64 h-64  object-cover rounded-full  "
+            className=" w-64 h-64 border-white border-2 object-cover rounded-full  "
             src="./images/presence.jpeg"
             alt="logo"
           />
         </div>
         <div>
-          <h1 className="text-7xl  text-center">
+          <h1 className="text-7xl  text-center text-white">
             We <strong>build</strong> digital <br /> experiences.
           </h1>
-          <h2 className="text-4xl pt-10 text-center">
+          <h2 className="text-4xl pt-10 text-center text-white">
             We collaborate with smart and creative people to build <br /> awesome Web
             Full Site.
           </h2>
