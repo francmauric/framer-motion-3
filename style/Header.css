@@ -1,15 +1,4 @@
-/* .logo {
-    width: 100px;
-    height: 100px;
-    transition: width 0.3s, height 0.3s;
+.navbar {
+    /* background: linear-gradient(to bottom, #ff7e5f, #feb47b); */
+    background: linear-gradient(to bottom, #130379, #bebdbd);
 }
-
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
- */

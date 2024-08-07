@@ -1,8 +1,33 @@
 import { motion } from "framer-motion";
-
+import "../style/Header.css"
+import styles from '../style/Home.module.css'
+import Text3d from '../components/3d/Text3d';
+import { useRef } from "react";
 
 function NavBarNuevo ({setIsOpen}) {
    
+    const plane = useRef(null);
+  const maxRotate = 45;
+
+  const manageMouseMove = (e) => {
+    const x = e.clientX / window.innerWidth
+    const y = e.clientY / window.innerHeight
+    const perspective = window.innerWidth * 4;
+    const rotateX = maxRotate * x - maxRotate / 2; 
+    const rotateY = (maxRotate * y - maxRotate / 2) * - 1;
+    plane.current.style.transform = `perspective(${perspective}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg)`
+  }
+
+
+
+
+
+
+
+
+
+
+
 
     const children = {
         hidden: {
@@ -57,36 +82,36 @@ function NavBarNuevo ({setIsOpen}) {
                 {
                     [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].
                     map((_,i) => (
-                        <motion.div key={i} className="w-full h-full bg-[#00771c] " 
+                        <motion.div key={i} className=" navbar w-full h-full  " 
                             variants={children} initial="hidden" 
                             animate="show" exit="exit" custom={i} ></motion.div>
                     ))
                 }
             </div>
-            <section className="w-full h-full absolute inset-0 flex justify-center items-center z-30">
-                <ul className="w-[900px] leading-none " > 
-                    <li className="overflow-hidden">
+            <section className="w-full h-full absolute inset-0 flex justify-start items-center z-30">
+                <ul onMouseMove={(e) => {manageMouseMove(e)}}  className=" ml-40  leading-none " > 
+                    <li ref={plane} className={styles.body}>
                         <motion.div variants={navLink} 
                                 initial="hidden" animate="show" exit="exit">
-                            <a href="#section-header" className="text-[80px] hover:text-[#eaeaea] "  onClick={handleLinkClick}  >ART</a>
+                            <a href="#section-header"   onClick={handleLinkClick}  ><Text3d primary={"Home"} secondary={"Home"}  /></a>
                         </motion.div>
                     </li>
-                    <li className="overflow-hidden">
+                    <li ref={plane} className={styles.body}>
                         <motion.div variants={navLink} 
                                 initial="hidden" animate="show" exit="exit">
-                            <a href="#section-carousel" className="text-[80px] hover:text-[#eaeaea] " onClick={handleLinkClick}   >CAROUSEL</a>
+                            <a href="#section-carousel"  onClick={handleLinkClick}   ><Text3d primary={"Carousel"} secondary={"Carousel"}  /></a>
                         </motion.div>
                     </li>
-                    <li className="overflow-hidden">
+                    <li ref={plane} className={styles.body}>
                         <motion.div variants={navLink} 
                                 initial="hideen" animate="show" exit="exit">
-                            <a href="#section-card" className="text-[80px] hover:text-[#eaeaea] "  onClick={handleLinkClick} >CARDS</a>
+                            <a href="#section-card"   onClick={handleLinkClick} ><Text3d primary={"Cards"} secondary={"bianca"}  /></a>
                         </motion.div>
                     </li>
-                    <li className="overflow-hidden">
+                    <li ref={plane} className={styles.body}>
                         <motion.div variants={navLink} 
                                 initial="hideen" animate="show" exit="exit">
-                            <a href="#section-beneficios" className="text-[80px] hover:text-[#eaeaea] " onClick={handleLinkClick}  >SECTIONS</a>
+                            <a href="#section-beneficios"  onClick={handleLinkClick}  ><Text3d primary={"Section"} secondary={"Section"}  /></a>
                         </motion.div>
                     </li>
                     

@@ -43,39 +43,31 @@ function Header() {
         animate={isOpen ? "scaleDown" : "scaleNormal"}
       >
         <div className="w-full pt-20 justify-center flex ">
+          <a href="#header" className="cursor-pointer text-white">
           <img
-            className=" w-64 h-64 border-white border-2 object-cover rounded-full  "
+            className="shadow-white shadow-lg w-64 h-64 border-white border-2 object-cover rounded-full  "
             src="./images/presence.jpeg"
             alt="logo"
-          />
+          /></a>
         </div>
-        <div>
+        <div >
           <h1 className="text-7xl  text-center text-white">
-            We <strong>build</strong> digital <br /> experiences.
+            We <strong className="text-gray-500">build</strong> digital <br /> experiences.
           </h1>
-          <h2 className="text-4xl pt-10 text-center text-white">
+          <h2 className="text-4xl pt-10  text-center text-white">
             We collaborate with smart and creative people to build <br /> awesome Web
             Full Site.
           </h2>
         </div>
       </motion.div>
-      {/* <div className="w-full bg-gray-400">
-        <motion.img
-        src="./images/presence.jpeg"
-        alt="padel"
-        className="absolute  w-full h-full object-cover 
-                origin-bottom"
-        variants={image}
-        animate={isOpen ? "scaleDown" : "scaleNormal"}
-      />
-      </div> */}
+      
       <section className="w-full h-full px-12 pt-4">
         <div
           className="w-full p-2  border border-[#eaeaea] border-dashed 
                      flex justify-between items-center rounded-lg relative z-40 "
         >
           <h1 className="font-bold text-[#eaeaea] text-2xl">
-            YOUR BEST IDEA MAKE TRUE
+          Boost your business
           </h1>
           <div
             className="space-y-2 cursor-pointer"

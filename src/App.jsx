@@ -9,12 +9,11 @@ function App() {
       <div>
         <HeaderPresentacion />
       </div>
-      <div>
+      
+      <div id="header">
         <Header />
       </div>
-      <div>
-        <h1 className="text-5xl text-white bg-gray-800"> esta es solo para mostar</h1>
-      </div>
+      
       <div>
         <SectionSeparate />
       </div>
@@ -27,6 +26,7 @@ function App() {
       <div>
         <img src="./images/1.jpg" alt="" />
       </div>
+      
     </div>
   );
 }
