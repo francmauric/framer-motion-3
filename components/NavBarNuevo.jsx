@@ -7,7 +7,7 @@ import { useRef } from "react";
 function NavBarNuevo ({setIsOpen}) {
    
     const plane = useRef(null);
-  const maxRotate = 45;
+    const maxRotate = 45;
 
   const manageMouseMove = (e) => {
     const x = e.clientX / window.innerWidth
@@ -88,8 +88,8 @@ function NavBarNuevo ({setIsOpen}) {
                     ))
                 }
             </div>
-            <section className="w-full h-full absolute inset-0 flex justify-start items-center z-30">
-                <ul onMouseMove={(e) => {manageMouseMove(e)}}  className=" ml-40  leading-none " > 
+            <section  className="w-full h-full absolute inset-0 flex justify-start items-center z-30">
+                <ul  onMouseMove={(e) => {manageMouseMove(e)}}  className=" ml-40  leading-none " > 
                     <li ref={plane} className={styles.body}>
                         <motion.div variants={navLink} 
                                 initial="hidden" animate="show" exit="exit">

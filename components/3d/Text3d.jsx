@@ -8,8 +8,8 @@ function Text3d ({primary, secondary}) {
     
     return (
         <div className={styles.textContainer}>
-            <p className={styles.primary}>{primary}</p>
-            <p className={styles.secondary}>{secondary}</p>
+            <p className={styles.primary} ref={text1}>{primary}</p>
+            <p className={styles.secondary} ref={text2} >{secondary}</p>
         </div>
     )
 }
