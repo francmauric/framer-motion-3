@@ -33,7 +33,7 @@ function Header() {
   };
 
   return (
-    <div className="header-div h-screen w-screen bg-[#eaeaea] overflow-hidden">
+    <div className="header-div min-h-screen w-screen bg-[#eaeaea] overflow-hidden">
       <motion.div
         src="./images/presence.jpeg"
         alt="padel"
@@ -58,6 +58,11 @@ function Header() {
             We collaborate with smart and creative people to build <br /> awesome Web
             Full Site.
           </h2>
+            <a href="">
+          <button className="text-white text-center text-3xl bg-blue-900 bg-opacity-20 blur-sm hover:blur-none hover:bg-opacity-100 hover:shadow-md hover:shadow-white rounded-2xl px-4 py-2 ">
+              Get Started
+            </button>
+            </a>
         </div>
       </motion.div>
       
