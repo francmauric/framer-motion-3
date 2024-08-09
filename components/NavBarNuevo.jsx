@@ -3,6 +3,7 @@ import "../style/Header.css"
 import styles from '../style/Home.module.css'
 import Text3d from '../components/3d/Text3d';
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 function NavBarNuevo ({setIsOpen}) {
    
@@ -111,9 +112,10 @@ function NavBarNuevo ({setIsOpen}) {
                     <li ref={plane} className={styles.body}>
                         <motion.div variants={navLink} 
                                 initial="hideen" animate="show" exit="exit">
-                            <a href="#section-beneficios"  onClick={handleLinkClick}  ><Text3d primary={"Section"} secondary={"Section"}  /></a>
+                            <Link to="/proyectos"  onClick={handleLinkClick}  ><Text3d primary={"Section"} secondary={"Section"}  /></Link>
                         </motion.div>
                     </li>
+                    
                     
                 </ul>
             </section>

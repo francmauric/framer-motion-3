@@ -2,16 +2,30 @@ import Header from "../components/Header";
 import HeaderPresentacion from "../components/HeaderPresentacion";
 import PositionDemo from "../components/PositionDemo";
 import SectionSeparate from "../components/SectionSeparate";
+import Section1 from "../components/Section1";
+import Proyectos from "./pages/Proyectos";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div /* className="App" */>
+   <Router>
+    <Routes>
+    {/* Rutas principales */}
+    <Route path="/" element={
+
+    <div>
       <div>
         <HeaderPresentacion />
       </div>
       
       <div id="header">
         <Header />
+      </div>
+      
+
+      
+      <div>
+        <Section1 />
       </div>
       
       <div>
@@ -28,6 +42,11 @@ function App() {
       </div>
       
     </div>
+    } />
+    {/* nueva ruta */}
+    <Route path="/proyectos" element={<Proyectos />} />
+    </Routes>
+   </Router> 
   );
 }
 
