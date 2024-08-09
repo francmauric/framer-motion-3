@@ -57,7 +57,7 @@ function SectionSeparate () {
 
 
     return (
-        <main className={styles.main}>
+        <main /* className={styles.main} */ className="z-50">
             <div className={styles.spacer}></div>
             <div ref={gallery} className={styles.gallery}>
                 <Column images={[images[0], images[1], images[2]]} y={y} />

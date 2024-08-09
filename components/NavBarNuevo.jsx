@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import "../style/Header.css"
 import styles from '../style/Home.module.css'
 import Text3d from '../components/3d/Text3d';
-import { useRef } from "react";
+import { useRef,useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 
 function NavBarNuevo ({setIsOpen}) {
-   
+    
     const plane = useRef(null);
     const maxRotate = 45;
 
@@ -18,7 +18,6 @@ function NavBarNuevo ({setIsOpen}) {
     const rotateY = (maxRotate * y - maxRotate / 2) * - 1;
     plane.current.style.transform = `perspective(${perspective}px) rotateX(${rotateY}deg) rotateY(${rotateX}deg)`
   }
-
 
 
 
@@ -78,7 +77,7 @@ function NavBarNuevo ({setIsOpen}) {
     }
 
     return (
-        <div className="w-screen h-screen overflow-hidden fixed inset-0">
+        <div className="w-screen h-screen overflow-hidden fixed inset-0 z-40 ">
             <div className="w-full h-full grid grid-cols-20 grid-rows-1">
                 {
                     [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20].
@@ -94,7 +93,7 @@ function NavBarNuevo ({setIsOpen}) {
                     <li ref={plane} className={styles.body}>
                         <motion.div variants={navLink} 
                                 initial="hidden" animate="show" exit="exit">
-                            <a href="#section-header"   onClick={handleLinkClick}  ><Text3d primary={"Home"} secondary={"Home"}  /></a>
+                            <a href="/"   onClick={handleLinkClick}  ><Text3d primary={"Home"} secondary={"Home"}  /></a>
                         </motion.div>
                     </li>
                     <li ref={plane} className={styles.body}>
@@ -112,7 +111,7 @@ function NavBarNuevo ({setIsOpen}) {
                     <li ref={plane} className={styles.body}>
                         <motion.div variants={navLink} 
                                 initial="hideen" animate="show" exit="exit">
-                            <Link to="/proyectos"  onClick={handleLinkClick}  ><Text3d primary={"Section"} secondary={"Section"}  /></Link>
+                            <Link to="/proyectos"  onClick={handleLinkClick}  ><Text3d primary={"Proyects"} secondary={"Proyects"}  /></Link>
                         </motion.div>
                     </li>
                     

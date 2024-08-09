@@ -18,7 +18,7 @@ function App() {
         <HeaderPresentacion />
       </div>
       
-      <div id="header">
+      <div id="section-header">
         <Header />
       </div>
       
