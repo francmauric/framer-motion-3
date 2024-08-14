@@ -89,7 +89,7 @@ function Header() {
         </div>
       </motion.div>
       
-      <section className={`w-full h-full  px-12 pt-4 overflow-hidden z-50 fixed inset-0 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+      <section className={`w-full h-40  px-12 pt-4 overflow-hidden z-50 fixed inset-0 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div
           className="w-full p-2  border border-[#eaeaea] border-dashed 
                      flex justify-between items-center rounded-lg relative z-40 "
